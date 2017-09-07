@@ -9,8 +9,16 @@ Copyright 2017 Graphmob. See LICENSE for copying information.
 
 ## Usage
 
+Install the library:
+
+```bash
+npm install graphmob-api --save
+```
+
+Then, import it:
+
 ```javascript
-var Graphmob = require("graphmob-api-node").Graphmob;
+var Graphmob = require("graphmob-api").Graphmob;
 ```
 
 Construct a new authenticated Graphmob client with your `user_id` and `secret_key` tokens (you can generate those from your Graphmob Dashboard, [see the docs](https://docs.graphmob.com/v1/)).
@@ -45,6 +53,14 @@ Then, pass those tokens **once** when you instanciate the Graphmob client as fol
 // Make sure to replace 'user_id' and 'secret_key' with your tokens
 var client = new Graphmob("user_id", "secret_key");
 ```
+
+## Data Discovery
+
+**When Graphmob doesn't know about a given data point, eg. an email that was never enriched before, it launches a discovery. Discoveries can take a few seconds, and sometimes more than 10 seconds.**
+
+This library implements a retry logic with a timeout if the discovery takes too long, or if the item wasn't found.
+
+Thus, you can expect some requests, especially the Enrich requests, to take more time than expected. This is normal, and is not a performance issue on your side, or on our side. Under the hood, when you request a data point (eg. enrich a person given an email) that doesn't yet exist in our databases, the Graphmob API returns the HTTP response `102 Processing`. Then, this library will poll the enrich resource for results, with intervals of a few seconds. The API will return `404 Not Found` as the discovery is still processing and no result is yet known at this point. Once a result is found, the API will reply with `200 OK` and discovered data. If the discovery fails and no data can be aggregated for this email, the library aborts the retry after some time (less than 20 seconds), and returns a `not_found` error.
 
 ## Resource Methods
 
