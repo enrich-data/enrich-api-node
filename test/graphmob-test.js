@@ -9,7 +9,7 @@
 "use strict";
 
 
-var Graphmob = require("../").Graphmob;
+var Graphmob = require("../");
 var assert = require("assert");
 
 
