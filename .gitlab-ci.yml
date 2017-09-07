@@ -8,6 +8,7 @@ stages:
 job_test_all:
   stage: test
   script:
+    - npm run check-build
     - npm test
   cache:
     key: "test"
