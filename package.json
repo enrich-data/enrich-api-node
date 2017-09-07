@@ -1,7 +1,7 @@
 {
   "name": "graphmob-api",
   "description": "Graphmob API Node.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://gitlab.com/graphmob-com/graphmob-api-node",
   "license": "MIT",
   "author": {
