@@ -4,7 +4,7 @@ The Graphmob API NodeJS wrapper. Enrich, Search and Verify data from your NodeJS
 
 Copyright 2017 Graphmob. See LICENSE for copying information.
 
-* **📝 Implements**: [Graphmob REST API ~ v1](https://docs.graphmob.com/v1/) at reference revision: 07/24/2017
+* **📝 Implements**: [Graphmob REST API ~ v1](https://docs.graphmob.com/api/v1/) at reference revision: 07/24/2017
 * **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
 
 ## Usage
@@ -21,7 +21,7 @@ Then, import it:
 var Graphmob = require("graphmob-api").Graphmob;
 ```
 
-Construct a new authenticated Graphmob client with your `user_id` and `secret_key` tokens (you can generate those from your Graphmob Dashboard, [see the docs](https://docs.graphmob.com/v1/)).
+Construct a new authenticated Graphmob client with your `user_id` and `secret_key` tokens (you can generate those from your Graphmob Dashboard, [see the docs](https://docs.graphmob.com/api/v1/)).
 
 ```javascript
 var client = new Graphmob("ui_xxxxxx", "sk_xxxxxx");
@@ -66,14 +66,14 @@ If a requested data point is already known by the Graphmob API, it will be immed
 
 ## Resource Methods
 
-This library implements all methods the Graphmob API provides. See the [API docs](https://docs.graphmob.com/v1/) for a reference of available methods, as well as how returned data is formatted.
+This library implements all methods the Graphmob API provides. See the [API docs](https://docs.graphmob.com/api/v1/) for a reference of available methods, as well as how returned data is formatted.
 
 ### Search API
 
 #### Lookup Companies
 
 * **Method:** `api.Search.LookupCompanies(query, page_number)`
-* **Docs:** [https://docs.graphmob.com/v1/#lookup-companies](https://docs.graphmob.com/v1/#lookup-companies)
+* **Docs:** [https://docs.graphmob.com/api/v1/#lookup-companies](https://docs.graphmob.com/api/v1/#lookup-companies)
 
 ```javascript
 api.Search.LookupCompanies({
@@ -85,7 +85,7 @@ api.Search.LookupCompanies({
 #### Lookup Emails
 
 * **Method:** `api.Search.LookupEmails(query, page_number)`
-* **Docs:** [https://docs.graphmob.com/v1/#lookup-emails](https://docs.graphmob.com/v1/#lookup-emails)
+* **Docs:** [https://docs.graphmob.com/api/v1/#lookup-emails](https://docs.graphmob.com/api/v1/#lookup-emails)
 
 ```javascript
 api.Search.LookupEmails({
@@ -96,7 +96,7 @@ api.Search.LookupEmails({
 #### Suggest Companies
 
 * **Method:** `api.Search.SuggestCompanies(query, page_number)`
-* **Docs:** [https://docs.graphmob.com/v1/#suggest-companies](https://docs.graphmob.com/v1/#suggest-companies)
+* **Docs:** [https://docs.graphmob.com/api/v1/#suggest-companies](https://docs.graphmob.com/api/v1/#suggest-companies)
 
 ```javascript
 api.Search.SuggestCompanies({
@@ -109,7 +109,7 @@ api.Search.SuggestCompanies({
 #### Validate an Email
 
 * **Method:** `api.Verify.ValidateEmail(query)`
-* **Docs:** [https://docs.graphmob.com/v1/#validate-an-email](https://docs.graphmob.com/v1/#validate-an-email)
+* **Docs:** [https://docs.graphmob.com/api/v1/#validate-an-email](https://docs.graphmob.com/api/v1/#validate-an-email)
 
 ```javascript
 api.Verify.ValidateEmail({
@@ -120,7 +120,7 @@ api.Verify.ValidateEmail({
 #### Format an Email
 
 * **Method:** `api.Verify.FormatEmail(query)`
-* **Docs:** [https://docs.graphmob.com/v1/#format-an-email](https://docs.graphmob.com/v1/#format-an-email)
+* **Docs:** [https://docs.graphmob.com/api/v1/#format-an-email](https://docs.graphmob.com/api/v1/#format-an-email)
 
 ```javascript
 api.Verify.FormatEmail({
@@ -135,7 +135,7 @@ api.Verify.FormatEmail({
 #### Enrich a Person
 
 * **Method:** `api.Enrich.Person(query)`
-* **Docs:** [https://docs.graphmob.com/v1/#enrich-a-person](https://docs.graphmob.com/v1/#enrich-a-person)
+* **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-person](https://docs.graphmob.com/api/v1/#enrich-a-person)
 
 ```javascript
 api.Enrich.Person({
@@ -146,7 +146,7 @@ api.Enrich.Person({
 #### Enrich a Company
 
 * **Method:** `api.Enrich.Company(query)`
-* **Docs:** [https://docs.graphmob.com/v1/#enrich-a-company](https://docs.graphmob.com/v1/#enrich-a-company)
+* **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-company](https://docs.graphmob.com/api/v1/#enrich-a-company)
 
 ```javascript
 api.Enrich.Company({
@@ -157,7 +157,7 @@ api.Enrich.Company({
 #### Enrich a Network
 
 * **Method:** `api.Enrich.Network(query)`
-* **Docs:** [https://docs.graphmob.com/v1/#enrich-a-network](https://docs.graphmob.com/v1/#enrich-a-network)
+* **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-network](https://docs.graphmob.com/api/v1/#enrich-a-network)
 
 ```javascript
 api.Enrich.Network({
