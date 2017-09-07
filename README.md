@@ -30,7 +30,7 @@ var client = new Graphmob("ui_xxxxxx", "sk_xxxxxx");
 Then, consume the client eg. to enrich an email address:
 
 ```javascript
-api.Enrich.Email({
+client.Enrich.Person({
   email: "valerian@crisp.chat"
 })
   .then(function(data) {
@@ -60,7 +60,7 @@ var client = new Graphmob("user_id", "secret_key");
 
 This library implements a retry logic with a timeout if the discovery takes too long, or if the item wasn't found.
 
-Thus, you can expect some requests, especially the Enrich requests, to take more time than expected. This is normal, and is not a performance issue on your side, or on our side. Under the hood, when you request a data point (eg. enrich a person given an email) that doesn't yet exist in our databases, the Graphmob API returns the HTTP response `102 Processing`. Then, this library will poll the enrich resource for results, with intervals of a few seconds. The API will return `404 Not Found` as the discovery is still processing and no result is yet known at this point. Once a result is found, the API will reply with `200 OK` and return discovered data. If the discovery fails and no data can be aggregated for this email, the library aborts the retry after some time (less than 20 seconds), and returns a `not_found` error.
+Thus, you can expect some requests, especially the Enrich requests, to take more time than expected. This is normal, and is not a performance issue on your side, or on our side. Under the hood, when you request a data point (eg. enrich a person given an email) that doesn't yet exist in our databases, the Graphmob API returns the HTTP response `201 Created`. Then, this library will poll the enrich resource for results, with intervals of a few seconds. The API will return `404 Not Found` as the discovery is still processing and no result is yet known at this point. Once a result is found, the API will reply with `200 OK` and return discovered data. If the discovery fails and no data can be aggregated for this email, the library aborts the retry after some time (less than 20 seconds), and returns a `not_found` error.
 
 If a requested data point is already known by the Graphmob API, it will be immediately returned, which won't induce any delay.
 
@@ -72,11 +72,11 @@ This library implements all methods the Graphmob API provides. See the [API docs
 
 #### Lookup Companies
 
-* **Method:** `api.Search.LookupCompanies(query, page_number)`
+* **Method:** `client.Search.LookupCompanies(query, page_number)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#lookup-companies](https://docs.graphmob.com/api/v1/#lookup-companies)
 
 ```javascript
-api.Search.LookupCompanies({
+client.Search.LookupCompanies({
   legal_name : "Crisp IM, Inc.",
   founded    : 2015
 }, 1);
@@ -84,22 +84,22 @@ api.Search.LookupCompanies({
 
 #### Lookup Emails
 
-* **Method:** `api.Search.LookupEmails(query, page_number)`
+* **Method:** `client.Search.LookupEmails(query, page_number)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#lookup-emails](https://docs.graphmob.com/api/v1/#lookup-emails)
 
 ```javascript
-api.Search.LookupEmails({
+client.Search.LookupEmails({
   email_domain : "crisp.chat"
 }, 1);
 ```
 
 #### Suggest Companies
 
-* **Method:** `api.Search.SuggestCompanies(query, page_number)`
+* **Method:** `client.Search.SuggestCompanies(query, page_number)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#suggest-companies](https://docs.graphmob.com/api/v1/#suggest-companies)
 
 ```javascript
-api.Search.SuggestCompanies({
+client.Search.SuggestCompanies({
   company_name : "Crisp"
 }, 1);
 ```
@@ -108,22 +108,22 @@ api.Search.SuggestCompanies({
 
 #### Validate an Email
 
-* **Method:** `api.Verify.ValidateEmail(query)`
+* **Method:** `client.Verify.ValidateEmail(query)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#validate-an-email](https://docs.graphmob.com/api/v1/#validate-an-email)
 
 ```javascript
-api.Verify.ValidateEmail({
+client.Verify.ValidateEmail({
   email : "valerian@crisp.chat"
 });
 ```
 
 #### Format an Email
 
-* **Method:** `api.Verify.FormatEmail(query)`
+* **Method:** `client.Verify.FormatEmail(query)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#format-an-email](https://docs.graphmob.com/api/v1/#format-an-email)
 
 ```javascript
-api.Verify.FormatEmail({
+client.Verify.FormatEmail({
   email_domain : "crisp.chat",
   first_name   : "Valerian",
   last_name    : "Saliou"
@@ -134,33 +134,33 @@ api.Verify.FormatEmail({
 
 #### Enrich a Person
 
-* **Method:** `api.Enrich.Person(query)`
+* **Method:** `client.Enrich.Person(query)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-person](https://docs.graphmob.com/api/v1/#enrich-a-person)
 
 ```javascript
-api.Enrich.Person({
+client.Enrich.Person({
   email : "valerian@crisp.chat"
 });
 ```
 
 #### Enrich a Company
 
-* **Method:** `api.Enrich.Company(query)`
+* **Method:** `client.Enrich.Company(query)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-company](https://docs.graphmob.com/api/v1/#enrich-a-company)
 
 ```javascript
-api.Enrich.Company({
+client.Enrich.Company({
   legal_name : "Crisp IM, Inc."
 });
 ```
 
 #### Enrich a Network
 
-* **Method:** `api.Enrich.Network(query)`
+* **Method:** `client.Enrich.Network(query)`
 * **Docs:** [https://docs.graphmob.com/api/v1/#enrich-a-network](https://docs.graphmob.com/api/v1/#enrich-a-network)
 
 ```javascript
-api.Enrich.Network({
+client.Enrich.Network({
   ip : "178.62.89.169"
 });
 ```
