@@ -18,30 +18,30 @@ describe("graphmob-api-node", function() {
     it("should succeed creating an instance with valid options", function() {
       assert.doesNotThrow(
         function() {
-          new Graphmob();
+          new Graphmob("dummy_user_id", "dummy_secret_key");
         },
 
         "Graphmob should not throw on valid options"
       );
     });
 
-    it("should fail creating an instance with missing user_id", function() {
-      assert.throws(
-        function() {
-          new Graphmob();
-        },
-
-        "Graphmob should throw on missing user_id"
-      );
-    });
-
     it("should fail creating an instance with missing secret_key", function() {
       assert.throws(
         function() {
-          new Graphmob();
+          new Graphmob("dummy_user_id");
         },
 
         "Graphmob should throw on missing secret_key"
+      );
+    });
+
+    it("should fail creating an instance with empty user_id", function() {
+      assert.throws(
+        function() {
+          new Graphmob("", "dummy_secret_key");
+        },
+
+        "Graphmob should throw on missing user_id"
       );
     });
   });
