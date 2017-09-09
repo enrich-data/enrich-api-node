@@ -31,7 +31,7 @@ Then, consume the client eg. to enrich an email address:
 
 ```javascript
 client.Enrich.Person({
-  email: "valerian@crisp.chat"
+  email : "valerian@crisp.chat"
 })
   .then(function(data) {
     console.info("Enriched email:", data);
