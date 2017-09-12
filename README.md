@@ -4,7 +4,7 @@ The Graphmob API NodeJS wrapper. Enrich, Search and Verify data from your NodeJS
 
 Copyright 2017 Graphmob. See LICENSE for copying information.
 
-* **📝 Implements**: [Graphmob REST API ~ v1](https://docs.graphmob.com/api/v1/) at reference revision: 07/24/2017
+* **📝 Implements**: [Graphmob REST API ~ v1](https://docs.graphmob.com/api/v1/) at reference revision: 09/12/2017
 * **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
 
 ## Usage
@@ -69,6 +69,17 @@ If a requested data point is already known by the Graphmob API, it will be immed
 This library implements all methods the Graphmob API provides. See the [API docs](https://docs.graphmob.com/api/v1/) for a reference of available methods, as well as how returned data is formatted.
 
 ### Search API
+
+#### Lookup People
+
+* **Method:** `client.Search.LookupPeople(query, page_number)`
+* **Docs:** [https://docs.graphmob.com/api/v1/#lookup-people](https://docs.graphmob.com/api/v1/#lookup-people)
+
+```javascript
+client.Search.LookupPeople({
+  company_name : "Crisp"
+}, 1);
+```
 
 #### Lookup Companies
 
