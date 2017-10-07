@@ -1,8 +1,8 @@
 {
-  "name": "graphmob-api",
-  "description": "Graphmob API Node.",
-  "version": "1.0.4",
-  "homepage": "https://gitlab.com/graphmob-com/graphmob-api-node",
+  "name": "enrich-api",
+  "description": "Enrich API Node.",
+  "version": "1.1.0",
+  "homepage": "https://gitlab.com/enrich-data/enrich-api-node",
   "license": "MIT",
   "author": {
     "name": "Valerian Saliou",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://gitlab.com/graphmob-com/graphmob-api-node.git"
+    "url": "git://gitlab.com/enrich-data/enrich-api-node.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://gitlab.com/graphmob-com/graphmob-api-node/blob/master/LICENSE"
+      "url": "https://gitlab.com/enrich-data/enrich-api-node/blob/master/LICENSE"
     }
   ],
-  "main": "lib/graphmob.js",
+  "main": "lib/enrich.js",
   "engines": {
     "node": ">= 4.0.0"
   },
