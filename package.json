@@ -2,7 +2,7 @@
   "name": "enrich-api",
   "description": "Enrich API Node.",
   "version": "1.1.0",
-  "homepage": "https://gitlab.com/enrich-data/enrich-api-node",
+  "homepage": "https://github.com/enrich-data/enrich-api-node",
   "license": "MIT",
   "author": {
     "name": "Valerian Saliou",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://gitlab.com/enrich-data/enrich-api-node.git"
+    "url": "git://github.com/enrich-data/enrich-api-node.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://gitlab.com/enrich-data/enrich-api-node/blob/master/LICENSE"
+      "url": "https://github.com/enrich-data/enrich-api-node/blob/master/LICENSE"
     }
   ],
   "main": "lib/enrich.js",

@@ -3,4 +3,3 @@ coverage/
 .jshintrc
 .jscsrc
 .checkbuild
-.gitlab-ci.yml
