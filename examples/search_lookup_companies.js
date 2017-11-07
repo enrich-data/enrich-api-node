@@ -19,7 +19,7 @@ var client = new Enrich(
 
 
 client.Search.LookupCompanies({
-  legal_name : "Crisp IM, Inc.",
+  legal_name : "Crisp IM SARL",
   founded    : 2015
 }, 1)
   .then(console.info)

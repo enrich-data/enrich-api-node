@@ -19,7 +19,7 @@ var client = new Enrich(
 
 
 client.Enrich.Company({
-  legal_name : "Crisp IM, Inc."
+  legal_name : "Crisp IM SARL"
 })
   .then(console.info)
   .catch(console.error);

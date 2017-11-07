@@ -88,7 +88,7 @@ client.Search.LookupPeople({
 
 ```javascript
 client.Search.LookupCompanies({
-  legal_name : "Crisp IM, Inc.",
+  legal_name : "Crisp IM SARL",
   founded    : 2015
 }, 1);
 ```
@@ -161,7 +161,7 @@ client.Enrich.Person({
 
 ```javascript
 client.Enrich.Company({
-  legal_name : "Crisp IM, Inc."
+  legal_name : "Crisp IM SARL"
 });
 ```
 
