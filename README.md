@@ -161,7 +161,7 @@ client.Enrich.Person({
 
 ```javascript
 client.Enrich.Company({
-  legal_name : "Crisp IM SARL"
+  name : "Crisp IM"
 });
 ```
 
