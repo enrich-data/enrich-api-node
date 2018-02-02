@@ -68,53 +68,6 @@ If a requested data point is already known by the Enrich API, it will be immedia
 
 This library implements all methods the Enrich API provides. See the [API docs](https://docs.enrichdata.com/api/v1/) for a reference of available methods, as well as how returned data is formatted.
 
-### Search API
-
-#### Lookup People
-
-* **Method:** `client.Search.LookupPeople(query, page_number)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#lookup-people](https://docs.enrichdata.com/api/v1/#lookup-people)
-
-```javascript
-client.Search.LookupPeople({
-  company_name : "Crisp"
-}, 1);
-```
-
-#### Lookup Companies
-
-* **Method:** `client.Search.LookupCompanies(query, page_number)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#lookup-companies](https://docs.enrichdata.com/api/v1/#lookup-companies)
-
-```javascript
-client.Search.LookupCompanies({
-  legal_name : "Crisp IM SARL",
-  founded    : 2015
-}, 1);
-```
-
-#### Lookup Emails
-
-* **Method:** `client.Search.LookupEmails(query, page_number)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#lookup-emails](https://docs.enrichdata.com/api/v1/#lookup-emails)
-
-```javascript
-client.Search.LookupEmails({
-  email_domain : "crisp.chat"
-}, 1);
-```
-
-#### Suggest Companies
-
-* **Method:** `client.Search.SuggestCompanies(query, page_number)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#suggest-companies](https://docs.enrichdata.com/api/v1/#suggest-companies)
-
-```javascript
-client.Search.SuggestCompanies({
-  company_name : "Crisp"
-}, 1);
-```
-
 ### Verify API
 
 #### Validate an Email
@@ -128,19 +81,6 @@ client.Verify.ValidateEmail({
 });
 ```
 
-#### Format an Email
-
-* **Method:** `client.Verify.FormatEmail(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#format-an-email](https://docs.enrichdata.com/api/v1/#format-an-email)
-
-```javascript
-client.Verify.FormatEmail({
-  email_domain : "crisp.chat",
-  first_name   : "Valerian",
-  last_name    : "Saliou"
-});
-```
-
 ### Enrich API
 
 #### Enrich a Person
@@ -151,17 +91,6 @@ client.Verify.FormatEmail({
 ```javascript
 client.Enrich.Person({
   email : "valerian@crisp.chat"
-});
-```
-
-#### Enrich a Company
-
-* **Method:** `client.Enrich.Company(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#enrich-a-company](https://docs.enrichdata.com/api/v1/#enrich-a-company)
-
-```javascript
-client.Enrich.Company({
-  name : "Crisp IM"
 });
 ```
 
