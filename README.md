@@ -94,6 +94,17 @@ client.Enrich.Person({
 });
 ```
 
+#### Enrich a Company
+
+* **Method:** `client.Enrich.Company(query)`
+* **Docs:** [https://docs.enrichdata.com/api/v1/#enrich-a-company](https://docs.enrichdata.com/api/v1/#enrich-a-company)
+
+```javascript
+client.Enrich.Company({
+  name : "Crisp IM"
+});
+```
+
 #### Enrich a Network
 
 * **Method:** `client.Enrich.Network(query)`
