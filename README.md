@@ -101,7 +101,7 @@ client.Enrich.Person({
 
 ```javascript
 client.Enrich.Company({
-  name : "Crisp IM"
+  domain : "crisp.chat"
 });
 ```
 
