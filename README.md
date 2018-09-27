@@ -21,7 +21,7 @@ Then, import it:
 var Enrich = require("enrich-api").Enrich;
 ```
 
-Construct a new authenticated Enrich client with your `user_id` and `secret_key` tokens (you can generate those from your Enrich Dashboard, [see the docs](https://docs.enrich.email/api/v1/)).
+Construct a new authenticated Enrich client with your `user_id` and `secret_key` tokens.
 
 ```javascript
 var client = new Enrich("ui_xxxxxx", "sk_xxxxxx");
@@ -45,7 +45,7 @@ _This library uses Promise for asynchronous response handling. If your NodeJS ve
 
 ## Authentication
 
-To authenticate against the API, generate your tokens (`user_id` and `secret_key`) **once** from your [Enrich Dashboard](https://dashboard.enrich.email/).
+To authenticate against the API, get your tokens (`user_id` and `secret_key`).
 
 Then, pass those tokens **once** when you instanciate the Enrich client as following:
 
