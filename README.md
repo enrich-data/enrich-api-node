@@ -4,7 +4,7 @@ The Enrich API NodeJS wrapper. Enrich, Search and Verify data from your NodeJS s
 
 Copyright 2017 Enrich. See LICENSE for copying information.
 
-* **📝 Implements**: [Enrich REST API ~ v1](https://docs.enrichdata.com/api/v1/) at reference revision: 09/12/2017
+* **📝 Implements**: [Enrich REST API ~ v1](https://docs.enrich.email/api/v1/) at reference revision: 09/12/2017
 * **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
 
 ## Usage
@@ -21,7 +21,7 @@ Then, import it:
 var Enrich = require("enrich-api").Enrich;
 ```
 
-Construct a new authenticated Enrich client with your `user_id` and `secret_key` tokens (you can generate those from your Enrich Dashboard, [see the docs](https://docs.enrichdata.com/api/v1/)).
+Construct a new authenticated Enrich client with your `user_id` and `secret_key` tokens (you can generate those from your Enrich Dashboard, [see the docs](https://docs.enrich.email/api/v1/)).
 
 ```javascript
 var client = new Enrich("ui_xxxxxx", "sk_xxxxxx");
@@ -45,7 +45,7 @@ _This library uses Promise for asynchronous response handling. If your NodeJS ve
 
 ## Authentication
 
-To authenticate against the API, generate your tokens (`user_id` and `secret_key`) **once** from your [Enrich Dashboard](https://dashboard.enrichdata.com/).
+To authenticate against the API, generate your tokens (`user_id` and `secret_key`) **once** from your [Enrich Dashboard](https://dashboard.enrich.email/).
 
 Then, pass those tokens **once** when you instanciate the Enrich client as following:
 
@@ -66,14 +66,14 @@ If a requested data point is already known by the Enrich API, it will be immedia
 
 ## Resource Methods
 
-This library implements all methods the Enrich API provides. See the [API docs](https://docs.enrichdata.com/api/v1/) for a reference of available methods, as well as how returned data is formatted.
+This library implements all methods the Enrich API provides. See the [API docs](https://docs.enrich.email/api/v1/) for a reference of available methods, as well as how returned data is formatted.
 
 ### Verify API
 
 #### Validate an Email
 
 * **Method:** `client.Verify.ValidateEmail(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#validate-an-email](https://docs.enrichdata.com/api/v1/#validate-an-email)
+* **Docs:** [https://docs.enrich.email/api/v1/#validate-an-email](https://docs.enrich.email/api/v1/#validate-an-email)
 
 ```javascript
 client.Verify.ValidateEmail({
@@ -86,7 +86,7 @@ client.Verify.ValidateEmail({
 #### Enrich a Person
 
 * **Method:** `client.Enrich.Person(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#enrich-a-person](https://docs.enrichdata.com/api/v1/#enrich-a-person)
+* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-person](https://docs.enrich.email/api/v1/#enrich-a-person)
 
 ```javascript
 client.Enrich.Person({
@@ -97,7 +97,7 @@ client.Enrich.Person({
 #### Enrich a Company
 
 * **Method:** `client.Enrich.Company(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#enrich-a-company](https://docs.enrichdata.com/api/v1/#enrich-a-company)
+* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-company](https://docs.enrich.email/api/v1/#enrich-a-company)
 
 ```javascript
 client.Enrich.Company({
@@ -108,7 +108,7 @@ client.Enrich.Company({
 #### Enrich a Network
 
 * **Method:** `client.Enrich.Network(query)`
-* **Docs:** [https://docs.enrichdata.com/api/v1/#enrich-a-network](https://docs.enrichdata.com/api/v1/#enrich-a-network)
+* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-network](https://docs.enrich.email/api/v1/#enrich-a-network)
 
 ```javascript
 client.Enrich.Network({
