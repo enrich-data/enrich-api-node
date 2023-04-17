@@ -1,5 +1,7 @@
 # enrich-api-node
 
+[![Test and Build](https://github.com/enrich-data/enrich-api-node/workflows/Test%20and%20Build/badge.svg?branch=master)](https://github.com/enrich-data/enrich-api-node/actions?query=workflow%3A%22Test+and+Build%22) [![NPM](https://img.shields.io/npm/v/enrich-api.svg)](https://www.npmjs.com/package/enrich-api) [![Downloads](https://img.shields.io/npm/dt/enrich-api.svg)](https://www.npmjs.com/package/enrich-api)
+
 The Enrich API NodeJS wrapper. Enrich, Search and Verify data from your NodeJS services.
 
 Copyright 2017 Crisp IM SAS. See LICENSE for copying information.
