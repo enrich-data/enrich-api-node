@@ -6,7 +6,6 @@ The Enrich API NodeJS wrapper. Enrich, Search and Verify data from your NodeJS s
 
 Copyright 2017 Crisp IM SAS. See LICENSE for copying information.
 
-* **📝 Implements**: [Enrich REST API ~ v1](https://docs.enrich.email/api/v1/) at reference revision: 09/12/2017
 * **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
 
 ## Usage
@@ -68,14 +67,13 @@ If a requested data point is already known by the Enrich API, it will be immedia
 
 ## Resource Methods
 
-This library implements all methods the Enrich API provides. See the [API docs](https://docs.enrich.email/api/v1/) for a reference of available methods, as well as how returned data is formatted.
+This library implements all methods the Enrich API provides.
 
 ### Verify API
 
 #### Validate an Email
 
 * **Method:** `client.Verify.ValidateEmail(query)`
-* **Docs:** [https://docs.enrich.email/api/v1/#validate-an-email](https://docs.enrich.email/api/v1/#validate-an-email)
 
 ```javascript
 client.Verify.ValidateEmail({
@@ -88,7 +86,6 @@ client.Verify.ValidateEmail({
 #### Enrich a Person
 
 * **Method:** `client.Enrich.Person(query)`
-* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-person](https://docs.enrich.email/api/v1/#enrich-a-person)
 
 ```javascript
 client.Enrich.Person({
@@ -99,7 +96,6 @@ client.Enrich.Person({
 #### Enrich a Company
 
 * **Method:** `client.Enrich.Company(query)`
-* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-company](https://docs.enrich.email/api/v1/#enrich-a-company)
 
 ```javascript
 client.Enrich.Company({
@@ -110,7 +106,6 @@ client.Enrich.Company({
 #### Enrich a Network
 
 * **Method:** `client.Enrich.Network(query)`
-* **Docs:** [https://docs.enrich.email/api/v1/#enrich-a-network](https://docs.enrich.email/api/v1/#enrich-a-network)
 
 ```javascript
 client.Enrich.Network({
