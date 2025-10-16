@@ -1,7 +1,7 @@
 {
   "name": "enrich-api",
   "description": "Enrich API Node.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "homepage": "https://github.com/enrich-data/enrich-api-node",
   "license": "MIT",
   "author": {
